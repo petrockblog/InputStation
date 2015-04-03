@@ -180,10 +180,10 @@ void Window::render() {
     auto &top = mGuiStack.back();
 
     bottom->render(transform);
-    if (bottom != top) {
+    // if (bottom != top) {
       mBackgroundOverlay->render(transform);
       top->render(transform);
-    }
+    // }
   }
 
   if (!mRenderedHelpPrompts)
