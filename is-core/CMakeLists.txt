@@ -136,6 +136,11 @@ set(EMBEDDED_ASSET_SOURCES
     ${inputstation-all_SOURCE_DIR}/data/converted/help_dpad_updown_svg.cpp
     ${inputstation-all_SOURCE_DIR}/data/converted/help_dpad_leftright_svg.cpp
     ${inputstation-all_SOURCE_DIR}/data/converted/help_dpad_all_svg.cpp
+    ${inputstation-all_SOURCE_DIR}/data/converted/help_analog_left_svg.cpp
+    ${inputstation-all_SOURCE_DIR}/data/converted/help_analog_right_svg.cpp
+    ${inputstation-all_SOURCE_DIR}/data/converted/help_analog_up_svg.cpp
+    ${inputstation-all_SOURCE_DIR}/data/converted/help_analog_down_svg.cpp
+    ${inputstation-all_SOURCE_DIR}/data/converted/help_analog_thumb_svg.cpp
 
     ${inputstation-all_SOURCE_DIR}/data/converted/opensans_hebrew_condensed_regular_ttf.cpp
     ${inputstation-all_SOURCE_DIR}/data/converted/opensans_hebrew_condensed_light_ttf.cpp
