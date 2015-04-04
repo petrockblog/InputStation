@@ -12,7 +12,8 @@ function inputconfiguration() {
     local inputscriptdir=$(dirname "$0")
     local inputscriptdir=$(cd "$inputscriptdir" && pwd)
 
-    # get input configuration from user
+    # get input configuration from 
+    pushd $inputscriptdir
     $inputscriptdir/../program/inputstation
 
     # now we should have the file "./inputconfiguration.cfg"
@@ -47,6 +48,7 @@ function inputconfiguration() {
         done
 
     fi
+    popd
 
 }
 
