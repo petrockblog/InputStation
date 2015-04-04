@@ -1,12 +1,14 @@
+## Credits
+
 Programming
-	Alec "Aloshi" Lofquist - http://www.aloshi.com
+: Florian Müller - [http://www.petrockblock.com](http://www.petrockblock.com)
+: Based on the sources of EmulationStation by Alec "Aloshi" Lofquist - [http://www.aloshi.com](http://www.aloshi.com)
 
 UI Art & Design
-	Nils Bonenberger
+: Nils Bonenberger
 
 
-Libraries
-=========
+## Libraries
 
 PugiXML
 	http://pugixml.org/
@@ -29,8 +31,7 @@ Boost
 nanosvg
 	https://github.com/memononen/nanosvg
 
-Resources
-=========
+## Resources
 
 Open Sans font
 	http://www.google.com/fonts/specimen/Open+Sans
