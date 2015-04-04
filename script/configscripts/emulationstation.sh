@@ -17,30 +17,31 @@
 #
 # function <button name>_inputconfig_<filename without extension>(),
 #
-# where <button name> is one of [ "up",
-#                                 "right",
-#                                 "down",
-#                                 "left",
-#                                 "a_btn",
-#                                 "b_btn",
-#                                 "x_btn",
-#                                 "y_btn",
-#                                 "l_btn",
-#                                 "r_btn",
-#                                 "l2_btn",
-#                                 "r2_btn",
-#                                 "l3_btn",
-#                                 "r3_btn",
-#                                 "start_btn",
-#                                 "select_btn",
-#                                 "l_x_plus_axis",
-#                                 "l_x_minus_axis",
-#                                 "l_y_plus_axis",
-#                                 "l_y_minus_axis",
-#                                 "r_x_plus_axis",
-#                                 "r_x_minus_axis",
-#                                 "r_y_plus_axis",
-#                                 "r_y_minus_axis" ].
+# where <button name> is one of [ "dpadup", 
+#                                 "dpadright", 
+#                                 "dpaddown", 
+#                                 "dpadleft", 
+#                                 "a", 
+#                                 "b", 
+#                                 "x", 
+#                                 "y", 
+#                                 "leftbottom", 
+#                                 "rightbottom", 
+#                                 "lefttop", 
+#                                 "righttop", 
+#                                 "leftthumb", 
+#                                 "rightthumb", 
+#                                 "start", 
+#                                 "select", 
+#                                 "leftanalogright", 
+#                                 "leftanalogleft", 
+#                                 "leftanalogdown", 
+#                                 "leftanalogup", 
+#                                 "rightanalogright", 
+#                                 "rightanalogleft", 
+#                                 "rightanalogdown", 
+#                                 "rightanalogup",
+#                                 "onleave" ].
 #
 # Globals:
 #   $home - the home directory of the user
@@ -57,53 +58,53 @@
 #   None
 #######################################
 
-function up_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+function dpadup_inputconfig_emulationstation() {
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "up" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "up" "key" "1073741906" "1"
 }
 
-function right_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+function dpadright_inputconfig_emulationstation() {
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "right" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "right" "key" "1073741903" "1"
 }
 
-function down_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+function dpaddown_inputconfig_emulationstation() {
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "down" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "down" "key" "1073741905" "1"
 }
 
-function left_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+function dpadleft_inputconfig_emulationstation() {
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "left" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "left" "key" "1073741904" "1"
 }
 
 function a_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "a" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "a" "key" "97" "1"
 }
 
 function b_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "b" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "b" "key" "115" "1"
 }
 
-function l_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+function leftbottom_inputconfig_emulationstation() {
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "pagedown" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "pagedown" "key" "1073741902" "1"
 }
 
-function r_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+function rightbottom_inputconfig_emulationstation() {
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "pageup" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "pageup" "key" "1073741899" "1"
 }
 
 function start_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "start" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "start" "key" "13" "1"
 }
 
 function select_inputconfig_emulationstation() {
-    setESInputConfig_inputconfig_emulationstation "$1" "$2" "$3" "$4" "$5" "$6"
+    setESInputConfig_inputconfig_emulationstation "$1" "$2" "select" "$4" "$5" "$6"
     setESInputConfig_inputconfig_emulationstation "keyboard" "Keyboard" "select" "key" "32" "1"
 }
 

@@ -17,31 +17,31 @@
 #
 # function <button name>_inputconfig_<filename without extension>(),
 #
-# where <button name> is one of [ "init",
-#                                 "up",
-#                                 "right",
-#                                 "down",
-#                                 "left",
-#                                 "a_btn",
-#                                 "b_btn",
-#                                 "x_btn",
-#                                 "y_btn",
-#                                 "l_btn",
-#                                 "r_btn",
-#                                 "l2_btn",
-#                                 "r2_btn",
-#                                 "l3_btn",
-#                                 "r3_btn",
-#                                 "start_btn",
-#                                 "select_btn",
-#                                 "l_x_plus_axis",
-#                                 "l_x_minus_axis",
-#                                 "l_y_plus_axis",
-#                                 "l_y_minus_axis",
-#                                 "r_x_plus_axis",
-#                                 "r_x_minus_axis",
-#                                 "r_y_plus_axis",
-#                                 "r_y_minus_axis" ].
+# where <button name> is one of [ "dpadup", 
+#                                 "dpadright", 
+#                                 "dpaddown", 
+#                                 "dpadleft", 
+#                                 "a", 
+#                                 "b", 
+#                                 "x", 
+#                                 "y", 
+#                                 "leftbottom", 
+#                                 "rightbottom", 
+#                                 "lefttop", 
+#                                 "righttop", 
+#                                 "leftthumb", 
+#                                 "rightthumb", 
+#                                 "start", 
+#                                 "select", 
+#                                 "leftanalogright", 
+#                                 "leftanalogleft", 
+#                                 "leftanalogdown", 
+#                                 "leftanalogup", 
+#                                 "rightanalogright", 
+#                                 "rightanalogleft", 
+#                                 "rightanalogdown", 
+#                                 "rightanalogup",
+#                                 "onleave" ].
 #
 # Globals:
 #   $home - the home directory of the user
@@ -58,7 +58,7 @@
 #   None
 #######################################
 
-function up_inputconfig_retroarch() {
+function dpadup_inputconfig_retroarch() {
     local deviceName=$2
     local inputName=$3
     local inputType=$4
@@ -74,7 +74,7 @@ function up_inputconfig_retroarch() {
     inputconfig_retroarch_iniSet "input_up_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
 }
 
-function right_inputconfig_retroarch() {
+function dpadright_inputconfig_retroarch() {
     local inputName=$3
     local inputType=$4
     local inputID=$5
@@ -87,7 +87,7 @@ function right_inputconfig_retroarch() {
     inputconfig_retroarch_iniSet "input_state_slot_increase_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
 }
 
-function down_inputconfig_retroarch() {
+function dpaddown_inputconfig_retroarch() {
     local inputName=$3
     local inputType=$4
     local inputID=$5
@@ -99,7 +99,7 @@ function down_inputconfig_retroarch() {
     inputconfig_retroarch_iniSet "input_down_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
 }
 
-function left_inputconfig_retroarch() {
+function dpadleft_inputconfig_retroarch() {
     local inputName=$3
     local inputType=$4
     local inputID=$5
@@ -138,39 +138,39 @@ function y_inputconfig_retroarch() {
     inputconfig_retroarch_iniSet "input_y_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function l_inputconfig_retroarch() {
+function leftbottom_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_l_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
     inputconfig_retroarch_iniSet "input_load_state_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function r_inputconfig_retroarch() {
+function rightbottom_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_r_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
     inputconfig_retroarch_iniSet "input_save_state_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function l2_inputconfig_retroarch() {
+function lefttop_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_l2_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function r2_inputconfig_retroarch() {
+function righttop_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_r2_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function l3_inputconfig_retroarch() {
+function leftthumb_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_l3_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function r3_inputconfig_retroarch() {
+function rightthumb_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_r3_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
@@ -190,49 +190,49 @@ function select_inputconfig_retroarch() {
     inputconfig_retroarch_iniSet "input_enable_hotkey_btn" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function l_x_plus_axis_inputconfig_retroarch() {
+function leftanalogright_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_l_x_plus_axis" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function l_x_minus_axis_inputconfig_retroarch() {
+function leftanalogleft_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_l_x_minus_axis" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function l_y_plus_axis_inputconfig_retroarch() {
+function leftanalogdown_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_l_y_plus_axis" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function l_y_minus_axis_inputconfig_retroarch() {
+function leftanalogup_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_l_y_minus_axis" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function r_x_plus_axis_inputconfig_retroarch() {
+function rightanalogright_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_r_x_plus_axis" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function r_x_minus_axis_inputconfig_retroarch() {
+function rightanalogleft_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_r_x_minus_axis" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function r_y_plus_axis_inputconfig_retroarch() {
+function rightanalogdown_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_r_y_plus_axis" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"
 }
 
-function r_y_minus_axis_inputconfig_retroarch() {
+function rightanalogup_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
     inputconfig_retroarch_iniSet "input_r_y_minus_axis" "$(inputconfig_retroarch_getButtonString "$3" "$4" "$5" "$6")"

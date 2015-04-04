@@ -13,7 +13,7 @@ InputStation is used by RetroPie, an open-source project that aims at turning sy
 
 - Try to update to the latest version of InputStation using git:
 ```bash
-cd InputStationDirectory
+cd InputStationDirectory/program/
 git pull
 cmake . -DFREETYPE_INCLUDE_DIRS=/usr/include/freetype2/
 make clean
@@ -35,7 +35,7 @@ sudo apt-get install libsdl2-dev libboost-system-dev libboost-filesystem-dev lib
 
 Then, generate and build the Makefile with CMake:
 ```bash
-cd YourInputStationDirectory
+cd YourInputStationDirectory/program/
 cmake . -DFREETYPE_INCLUDE_DIRS=/usr/include/freetype2/
 make clean
 make
