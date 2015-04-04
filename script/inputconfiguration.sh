@@ -72,7 +72,4 @@ function getInputAttribute() {
 
 ###### main ######
 
-user="$SUDO_USER"
-[[ -z "$user" ]] && user=$(id -un)
-
-home="$(eval ech
+inputconfiguration
