@@ -15,7 +15,7 @@ InputStation is used by RetroPie, an open-source project that aims at turning sy
 ```bash
 cd InputStationDirectory
 git pull
-cmake .
+cmake . -DFREETYPE_INCLUDE_DIRS=/usr/include/freetype2/
 make clean
 make
 ```
