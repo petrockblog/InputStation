@@ -20,7 +20,7 @@ make clean
 make
 ```
 
-- If your problem still isn't gone, the best way to report a bug is to post an issue on GitHub. Try to post the simplest steps possible to reproduce the bug. Include files you think might be related. If you haven't re-run InputStation since the crash, the log file `~/.inputstation/is_log.txt` is also helpful.
+- If your problem still isn't gone, the best way to report a bug is to post an issue on GitHub. Try to post the simplest steps possible to reproduce the bug. Include files you think might be related. If you haven't re-run InputStation since the crash, the log file `is_log.txt` is also helpful.
 
 ## Building
 
@@ -35,8 +35,8 @@ sudo apt-get install libsdl2-dev libboost-system-dev libboost-filesystem-dev lib
 
 Then, generate and build the Makefile with CMake:
 ```bash
-cd YourEmulationStationDirectory
-cmake .
+cd YourInputStationDirectory
+cmake . -DFREETYPE_INCLUDE_DIRS=/usr/include/freetype2/
 make clean
 make
 ```
