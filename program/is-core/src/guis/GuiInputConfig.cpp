@@ -14,14 +14,14 @@ static const char* inputName[inputCount] =
     "DPadDown",
     "DPadLeft",
     "DPadRight",
-    "A",
-    "B",
     "Start",
     "Select",
-    "LeftBottom",
-    "RightBottom",
+    "A",
+    "B",
     "X",
     "Y",
+    "LeftBottom",
+    "RightBottom",
     "LeftTop",
     "RightTop",
     "LeftThumb",
@@ -248,7 +248,8 @@ GuiInputConfig::GuiInputConfig(Window* window, InputConfig* target,
 
                 return true;
             }
-            else {
+            else 
+            {
                 // input up
                 // make sure we were holding something and we let go of what we were
                 // previously holding
