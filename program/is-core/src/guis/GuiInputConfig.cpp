@@ -124,7 +124,7 @@ static const char* inputIcon[inputCount] =
 
 using namespace Eigen;
 
-#define HOLD_TO_SKIP_MS 5000
+#define HOLD_TO_SKIP_MS 2500
 
 GuiInputConfig::GuiInputConfig(Window* window, InputConfig* target,
                                bool reconfigureAll,
