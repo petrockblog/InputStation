@@ -33,16 +33,26 @@ function inputconfiguration() {
             for button in "${inputConfigButtonList[@]}"; do
                 funcname=$button"_inputconfig_"${onlyFilename::-3}
 
-                inputName=$(getInputAttribute "$button" "name")
-                inputType=$(getInputAttribute "$button" "type")
-                inputID=$(getInputAttribute "$button" "id")
-                inputValue=$(getInputAttribute "$button" "value")
+                # if interface function is implemented
+                if fn_exists "$funcname"; then  
 
-                fn_exists "$funcname" && "$funcname" "$deviceType" "$deviceName" "$inputName" "$inputType" "$inputID" "$inputValue"
+                    inputName=$(getInputAttribute "$button" "name")
+                    inputType=$(getInputAttribute "$button" "type")
+                    inputID=$(getInputAttribute "$button" "id")
+                    inputValue=$(getInputAttribute "$button" "value")
+
+                    # if input was defined
+                    if [[ $(xmlstarlet sel -t -v "count(/inputList/inputConfig[@deviceName='$deviceName']/input[@name='$inputName'])" ./inputconfiguration.cfg) -ne 0 ]]; then
+                        "$funcname" "$deviceType" "$deviceName" "$inputName" "$inputType" "$inputID" "$inputValue"
+                    fi
+                fi
             done
 
             # at the end, the onleave_inputconfig_X function is called
             funcname="onleave_inputconfig_"${onlyFilename::-3}
+            fn_exists "$funcname"
+
+            # if interface function is implemented
             fn_exists "$funcname" && "$funcname" "$deviceType" "$deviceName"
 
         done
@@ -73,5 +83,9 @@ function getInputAttribute() {
 }
 
 ###### main ######
+
+user="$SUDO_USER"
+[[ -z "$user" ]] && user=$(id -un)
+home="$(eval echo ~$user)"
 
 inputconfiguration

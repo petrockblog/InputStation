@@ -241,12 +241,13 @@ function rightanalogup_inputconfig_retroarch() {
 function onleave_inputconfig_retroarch() {
     local deviceType=$1
     local deviceName=$2
-    newFilename=${deviceName//[[:blank:]]/}".cfg"
+    newFilename=$(echo "$deviceName" | sed -e 's/ /_/g')".cfg"
     mv "tempconfig.cfg" "$newFilename"
     if [[ -f "/opt/retropie/emulators/retroarch/configs/$newFilename" ]]; then
         mv "/opt/retropie/emulators/retroarch/configs/$newFilename" "/opt/retropie/emulators/retroarch/configs/$newFilename.bak"
     fi
     mv "$newFilename" "/opt/retropie/emulators/retroarch/configs/$newFilename"
+    chown $user:$user "/opt/retropie/emulators/retroarch/configs/$newFilename"
 }
 
 ###### helper functions ######
@@ -318,7 +319,7 @@ function inputconfig_retroarch_getButtonString() {
     if [[ "$inputType" == "hat" ]]; then
         btnString="h"$inputID$inputName
     elif [[ "$inputType" == "axis" ]]; then
-        if [[ "$inputValue" == "+1" ]]; then
+        if [[ "$inputValue" == "1" ]]; then
             btnString="+"$inputID
         else
             btnString="-"$inputID
