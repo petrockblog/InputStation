@@ -71,7 +71,7 @@ function dpadup_inputconfig_retroarch() {
     inputconfig_retroarch_iniSet "input_device" "$deviceName"
     inputconfig_retroarch_iniSet "input_driver" "udev"
 
-    inputconfig_retroarch_iniSet "input_up_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
+    inputconfig_retroarch_iniSet "input_up_btn" "$(inputconfig_retroarch_getButtonString "up" "$inputType" "$inputID" "$inputValue")"
 }
 
 function dpadright_inputconfig_retroarch() {
@@ -83,8 +83,8 @@ function dpadright_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
 
-    inputconfig_retroarch_iniSet "input_right_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
-    inputconfig_retroarch_iniSet "input_state_slot_increase_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
+    inputconfig_retroarch_iniSet "input_right_btn" "$(inputconfig_retroarch_getButtonString "right" "$inputType" "$inputID" "$inputValue")"
+    inputconfig_retroarch_iniSet "input_state_slot_increase_btn" "$(inputconfig_retroarch_getButtonString "right" "$inputType" "$inputID" "$inputValue")"
 }
 
 function dpaddown_inputconfig_retroarch() {
@@ -96,7 +96,7 @@ function dpaddown_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
 
-    inputconfig_retroarch_iniSet "input_down_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
+    inputconfig_retroarch_iniSet "input_down_btn" "$(inputconfig_retroarch_getButtonString "down" "$inputType" "$inputID" "$inputValue")"
 }
 
 function dpadleft_inputconfig_retroarch() {
@@ -108,8 +108,8 @@ function dpadleft_inputconfig_retroarch() {
     configfile="tempconfig.cfg"
     inputconfig_retroarch_iniConfig " = " "\"" "$configfile"
 
-    inputconfig_retroarch_iniSet "input_left_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
-    inputconfig_retroarch_iniSet "input_state_slot_decrease_btn" "$(inputconfig_retroarch_getButtonString "$inputName" "$inputType" "$inputID" "$inputValue")"
+    inputconfig_retroarch_iniSet "input_left_btn" "$(inputconfig_retroarch_getButtonString "left" "$inputType" "$inputID" "$inputValue")"
+    inputconfig_retroarch_iniSet "input_state_slot_decrease_btn" "$(inputconfig_retroarch_getButtonString "left" "$inputType" "$inputID" "$inputValue")"
 }
 
 function a_inputconfig_retroarch() {
