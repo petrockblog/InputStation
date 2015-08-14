@@ -2,7 +2,7 @@
 
 A graphical front-end for generating game controller configuration files. It is based on the work for [EmulationStation](https://www.github.com/aloshi/EmulationStation) by Aloshi.
 
-Project website: http://github.com/petrockblock/inputstation
+Project website: http://github.com/petrockblog/inputstation
 
 InputStation is used by RetroPie, an open-source project that aims at turning system-on-chip platforms like the Raspberry Pi into old-school gaming machines. You can find that project at [retropie.net](http://retropie.net).
 
